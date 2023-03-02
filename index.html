@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apply YAML to Kubernetes Cluster</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="my-5">Apply YAML to Kubernetes Cluster</h1>
+    <form id="yaml-form">
+      <div class="form-group">
+        <label for="api-url">API URL:</label>
+        <input type="text" class="form-control" id="api-url">
+      </div>
+      <div class="form-group">
+        <label for="kubeconfig-file">Select Kubeconfig File:</label>
+        <input type="file" class="form-control-file" id="kubeconfig-file" accept=".yaml,.yml">
+      </div>
+      <div class="form-group">
+        <label for="yaml-editor">YAML Editor:</label>
+        <textarea id="yaml-editor" class="form-control"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/yaml/yaml.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
